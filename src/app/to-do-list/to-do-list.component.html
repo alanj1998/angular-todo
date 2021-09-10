@@ -1,0 +1,12 @@
+<div>
+    <!-- tutaj bedzie miejsce na nasz input -->
+    <app-to-do-input (addTodoOutput)="addToList($event)"></app-to-do-input>
+    <!-- tutaj bedzie miejsce na nasze itemy -->
+    <div *ngIf="isEmpty()">
+        <p>There are no to-do items. Add one above.</p>
+    </div>
+    <div *ngIf="!isEmpty()">
+        <!-- to-do items are rendered here -->
+        <app-to-do-item *ngFor="let todo of todoList" [todo]="todo" (removeTodoOutput)="removeFromTodoList($event)"></app-to-do-item>
+    </div>
+</div>

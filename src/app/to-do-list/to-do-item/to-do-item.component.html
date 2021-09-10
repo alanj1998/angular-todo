@@ -1,0 +1,8 @@
+<div *ngIf="todo !== undefined" class="to-do-item row">
+    <div class="col-8">
+        {{todo.text}}
+    </div>
+    <div class="col-4">
+       <button class="btn btn-danger" (click)="removeTodo()">Delete</button> 
+    </div>
+</div>

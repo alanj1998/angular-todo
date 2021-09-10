@@ -1,0 +1,8 @@
+<div class="to-do-input-container row">
+    <div class="col-8" [formGroup]="inputFormGroup">
+        <input type="text" formControlName="todoText">
+    </div>
+    <div class="col-4">
+        <button class="btn btn-primary" (click)="addTodo()">Add To-Do</button>
+    </div>
+</div>
